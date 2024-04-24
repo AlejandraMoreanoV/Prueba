@@ -40,7 +40,6 @@ public class ControladorEstudiante {
                 || estudiante.getNombre().isEmpty()
                 || estudiante.getApellido()==null
                 || estudiante.getApellido().isEmpty()) {
-            System.out.print("AAAAAAA");
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Información inválida, por favor corregir.");
         }
         Estudiante e = servicioEstudiante.crearEstudiante(estudiante);

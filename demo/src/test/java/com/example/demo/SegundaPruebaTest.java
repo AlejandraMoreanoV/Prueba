@@ -18,6 +18,7 @@ class SegundaPruebaTest {
 
     @Test
     void segundaPruebaSerializacionTest() throws IOException {
+
         Tarjeta tarjeta = new Tarjeta(99L, 123.45);
         assertThat(json.write(tarjeta)).isStrictlyEqualToJson("/expected.json");
         assertThat(json.write(tarjeta)).hasJsonPathNumberValue("@.id");
